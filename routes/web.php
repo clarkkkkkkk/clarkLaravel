@@ -7,12 +7,20 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', function () {
-/*     if(now()->isSunday()){
-        return view('blog.content1', ["sunday" => "Hi Sunday" ]);
-    }else{
-        return view('blog.content2', ["notSunday" => "Hello Monday" ]);
-    } */
+    $blog = [
+        ["name" => "Clark", "skill" => 75, "id" => "1"],
+        ["name" => "Kent", "skill" => 99, "id" => "2"],
+    ];
+        return view('blog.content1', 
+        [
+            "notSunday" => "Hello Monday",
+            "blog" => $blog
+        ]);
 });
 
-
-//the last function may view the "WELCOME"
+Route::get('/blog/{id}', function ($id) {
+        return view('blog.show', 
+        [
+            "id" => $id
+        ]);
+});

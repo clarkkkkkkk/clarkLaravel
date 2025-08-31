@@ -10,10 +10,19 @@
 <body>
     <h1>We're here in blog1</h1>
 
-    <p> {{ $sunday }}</p>
+    <p> {{ $notSunday }}</p>
 
     <ul>
-        <li>Clark</li>
+        <li>
+            <a href="blog/{{ $blog[0]["id"] }}">
+                {{ $blog[0]["name"]}}
+            </a>
+        </li>
+        <li>
+            <a href="blog/{{ $blog[1]["id"] }}">
+                {{ $blog[1]["name"]}}
+            </a>
+        </li>
     </ul>
 </body>
 
