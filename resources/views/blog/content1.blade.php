@@ -10,8 +10,10 @@
 <body>
     <h1>We're here in blog1</h1>
 
-    <p> {{ $notSunday }}</p>
-
+    @if ($notSunday == "Hello Monday")
+        <p> {{ $notSunday }}</p>
+    @endif
+    {{-- this (@) at symbol use when you use only IF STATEMENT --}}
     <ul>
         <li>
             <a href="blog/{{ $blog[0]["id"] }}">
