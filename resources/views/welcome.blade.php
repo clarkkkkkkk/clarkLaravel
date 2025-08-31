@@ -9,9 +9,13 @@
 </head>
 
 <body>
-    <h1>Hellow to the Clark</h1>
+    <h1 class="text-decoration-line: underline;">
+        Hellow to the Clark
+    </h1>
+
     <p>Click the button below</p>
-    <a href="" class="btn">
+
+    <a href="/blog" class="btn">
         WOW!
     </a>
 </body>
