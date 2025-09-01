@@ -18,6 +18,10 @@ Route::get('/blog', function () {
         ]);
 });
 
+Route::get('/blog/create', function () {
+    return view('blog.create');
+});
+
 Route::get('/blog/{id}', function ($id) {
         return view('blog.show', ["id" => $id]);
 });
