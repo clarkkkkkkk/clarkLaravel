@@ -19,8 +19,5 @@ Route::get('/blog', function () {
 });
 
 Route::get('/blog/{id}', function ($id) {
-        return view('blog.show', 
-        [
-            "id" => $id
-        ]);
+        return view('blog.show', ["id" => $id]);
 });
