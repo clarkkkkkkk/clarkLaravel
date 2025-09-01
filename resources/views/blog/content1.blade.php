@@ -12,8 +12,9 @@
     <ul>
         @foreach ($blog as $itemz)
             <li>
-                <p>{{ $itemz['name']}}</p>
-                <a href="/blog/{{ $itemz['id'] }}">{{ $itemz['skill'] }}</a>
+                <x-card href="/blog/{{ $itemz['id'] }}" :highlight="$itemz['skill'] > 76">
+                    <h3>{{ $itemz['name'] }}</h3>
+                </x-card>
             </li>
         @endforeach
     </ul>
