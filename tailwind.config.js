@@ -1,7 +1,7 @@
-import defaulthTheme from 'tailwindcss/defaultTheme';
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
-export default = {
+module.exports = {
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -10,7 +10,7 @@ export default = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaulthTheme.fontFamily.sans],
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
     },

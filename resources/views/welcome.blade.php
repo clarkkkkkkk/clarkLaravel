@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clark | Laravel</title>
 
+    {{-- from tailwindCss --}}
     @vite(entrypoints: 'resources/css/app.css');
-
 </head>
 
 <body class="text-center px-8 py-12">
