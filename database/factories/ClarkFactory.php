@@ -17,7 +17,10 @@ class ClarkFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            //new cark record;
+            'name' => fake()->name(),
+            'bio' => fake()->realText(500), //fake() - generates fake information
+            'skill' => fake()->numberBetween(0,100) 
         ];
     }
 }
