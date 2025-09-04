@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Clark;
 
 class ClarkSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class ClarkSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Clark::factory()->count(50)->create();
     }
 }

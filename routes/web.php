@@ -1,27 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClarkController;
 
 Route::get('/', function () {
-    return view('WELCOME');
+    return view('welcome');
 });
 
-Route::get('/blog', function () {
-    $blog = [
-        ["name" => "Clark", "skill" => 75, "id" => "1"],
-        ["name" => "Kent", "skill" => 99, "id" => "2"],
-    ];
-        return view('blog.content1', 
-        [
-            "notSunday" => "Hello Monday",
-            "blog" => $blog
-        ]);
-});
+Route::get('/blog', [ClarkController::class, 'content1']);
 
 Route::get('/blog/create', function () {
     return view('blog.create');
 });
 
 Route::get('/blog/{id}', function ($id) {
-        return view('blog.show', ["id" => $id]);
+    return view('blog.show', ["id" => $id]);
 });

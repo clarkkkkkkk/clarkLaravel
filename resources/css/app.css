@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-    @apply text-xlfont-bold my-4;
+    @apply text-xl font-bold my-4;
 }
 
 h3 {
@@ -67,7 +67,7 @@ textarea {
 }
 
 .highlight {
-    @apply broder-l-4 border-l-red-500;
+    @apply border-l-4 border-l-red-500;
 }
 
 .btn {
